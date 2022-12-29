@@ -14,6 +14,9 @@ const Order = require('./models/order');
 const OrderItem = require('./models/order-item');
 
 const app = express();
+const dotenv = require('dotenv');
+
+dotenv.config();
 app.use(cors());
 app.set('view engine', 'ejs');
 app.set('views', 'views');
