@@ -93,7 +93,7 @@ parentContainer.addEventListener("click", (e) => {
 window.addEventListener("DOMContentLoaded", () => {
   console.log("loaded");
 
-  axios.get("http://localhost:3000/products").then((data) => {
+  axios.get("http://44.201.75.43:3000/products").then((data) => {
     console.log(data);
 
     if (data.request.status === 200) {
