@@ -93,7 +93,7 @@ parentContainer.addEventListener("click", (e) => {
 window.addEventListener("DOMContentLoaded", () => {
   console.log("loaded");
 
-  axios.get("http://44.201.75.43:3000/products").then((data) => {
+  axios.get("http://54.83.134.16:3000/products").then((data) => {
     console.log(data);
 
     if (data.request.status === 200) {
@@ -121,7 +121,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function addToCart(productId) {
   // productId -> get product id from frontend. (controllers/shop.js -> postCart)
   axios
-    .post("http://44.201.75.43:3000/cart", { productId: productId })
+    .post("http://54.83.134.16:3000/cart", { productId: productId })
     .then((response) => {
       // console.log(response)
       if (response.status === 200) {
@@ -138,7 +138,7 @@ function addToCart(productId) {
 
 function getCartDetails() {
   axios
-    .get("http://44.201.75.43:3000/cart")
+    .get("http://54.83.134.16:3000/cart")
     .then((response) => {
       if (response.status === 200) {
         response.data.products.forEach((product) => {
